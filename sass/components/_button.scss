@@ -1,0 +1,19 @@
+.button-explore {
+  width: 218px;
+  height: 50px;
+  border: 0;
+  border-radius: 50px;
+  @include gradient-button(false);
+  cursor: pointer;
+  margin-bottom:55px;
+  font-size: $font-exsm;
+  font-weight: 600;
+  color: $color-white;
+  @include mobile-landscape{
+    width:250px;
+  }
+}
+
+.button-explore--hover:hover {
+  @include gradient-button(true);
+}

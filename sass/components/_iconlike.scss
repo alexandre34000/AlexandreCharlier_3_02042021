@@ -1,0 +1,61 @@
+.like {
+  position: relative;
+  grid-area: right;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+.like-label{
+  cursor: pointer;
+}
+.like input[type="checkbox"]:checked +.like-label{
+  .icon-solid--opacity{
+    opacity:1;
+  }
+  .icon-regular--opacity{
+    opacity:0;
+  }
+}
+
+.like input[type="checkbox"]:not(:checked) +.like-label--hover:hover{
+  .icon-solid--opacity{
+    opacity:1;
+  }
+  .icon-regular--opacity{
+    opacity:0;
+  }
+}
+
+.like-input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.like-label__icon-regular::before {
+  @include icon-like;
+  color: black;
+}
+
+.like-label__icon-solid::before {
+  @include icon-like;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from($secondary),
+    to($primary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+} 
+
+.icon-regular--opacity{
+  transition: all 0.4s ease-out;
+  opacity:1;
+}
+.icon-solid--opacity{
+  transition: all 0.4s ease-out;
+  opacity:0;
+}
+

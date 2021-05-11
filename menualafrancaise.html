@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="ohmyfood - Commandez vos repas et menu gastronomique en ligne " />
+    <meta name="keywords" content="Restaurants, commandes, repas, gastronomique" />
+    <meta name="description" content="ohmyfood - Commandez vos repas et menu gastronomique en ligne " />
+    <meta name="author" content="Alexandre CHARLIER " />
+    <title>ohmyfood</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" />
+    <link rel="icon" type="image/svg+xml" href="./dist/pictures/logo/ohmyfood@2x.svg" sizes="392x68"/>
+    <link rel="stylesheet" href="./dist/css/restaurants-style.css" />
+</head>
+
+<body>
+    <header>
+        <h1 class="h1-title">ohmyfood - Commandez vos repas et menu gastronomique en ligne </h1>
+        <div class="container-entete">
+            <div class="content-entete">
+                <a class="link" href="home.html" aria-label="Retour à la page d'accceuil"></a>
+                <img class="entete__logo" src=".dist/pictures/logo/ohmyfood.png"
+                    srcset="./dist/pictures/logo/ohmyfood@2x.svg" alt="ohmyfood" width="392" height="68" />
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container-restaurant">
+            <img class="container-img__standard" src="./dist/pictures/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                alt="restaurant à la francaise" />
+            <div class="container-menu__standard">
+                <div class="content-menu__standard">
+                    <h2 class="restaurant-title">&#192; la francaise </h2>
+                    <button class=" restaurant-btn__like btn-like" onclick="toMakeALike()" aria-label="bouton j'aime" name="btn-like" title="j'aime">
+                        <span class="btn-like__icon-solid icon-solid--opacity">
+                            <i class="fas fa-heart btn-like__icon-solid"></i>
+                        </span>
+                        <span class="btn-like__icon-regular icon-regular--opacity">
+                            <i class="far fa-heart btn-like__icon-regular"></i>
+                        </span>
+                    </button>
+                    <form class=content-form name="formMenu">
+                        <section class="menu">
+                            <h3 class="menu-title">ENTR&#201;ES</h3>
+                            <span class="horizontal-line"></span>
+                            <div class="menu-list">
+                                <div class="container-menu__item">
+                                    <input id="input-entree1" type="checkbox" name="entree" value="Tartare">
+                                    <label class="label-menu" for="input-entree1"></label>
+                                    <div class="menu-item__intitule">
+                                        <span class="menu-item__intitule-title">Tartare de poulpe acidulé</span>
+                                        <span class="menu-item__intitule-subtitle">Aux zestes d'orange </span>
+                                        <span class="menu-item__intitule-price">25€</span>
+                                    </div>
+                                    <div class="menu-item__check">
+                                        <div class=" menu-item__iconBox">
+                                            <span class="menu-item__iconBox-icon"><i
+                                                    class="fas fa-check-circle icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-menu__item">
+                                    <input id="input-entree2" type="checkbox" name="entree" value="Velouté">
+                                    <label class="label-menu" for="input-entree2"></label>
+                                    <div class="menu-item__intitule">
+                                        <span class="menu-item__intitule-title">Velouté de légumes d'antan</span>
+                                        <span class="menu-item__intitule-subtitle">Carotte, panais, topinambour</span>
+                                        <span class="menu-item__intitule-price">35€</span>
+                                    </div>
+                                    <div class="menu-item__check">
+                                        <div class=" menu-item__iconBox">
+                                            <span class="menu-item__iconBox-icon"><i
+                                                    class="fas fa-check-circle icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-menu__item">
+                                    <input id="input-entree3" type="checkbox" name="entree" value="Velouté">
+                                    <label class="label-menu" for="input-entree3"></label>
+                                    <div class="menu-item__intitule">
+                                        <span class="menu-item__intitule-title">Soupe à l'oignon</span>
+                                        <span class="menu-item__intitule-subtitle">Revisitée</span>
+                                        <span class="menu-item__intitule-price">20€</span>
+                                    </div>
+                                    <div class="menu-item__check">
+                                        <div class=" menu-item__iconBox">
+                                            <span class="menu-item__iconBox-icon"><i
+                                                    class="fas fa-check-circle icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="menu">
+                            <h3 class="menu-title">PLATS</h3>
+                            <span class="horizontal-line"></span>
+                            <div class="menu-list">
+                                <div class="container-menu__item">
+                                    <input id="input-entree10" type="checkbox" name="plat" value="St-Jacques">
+                                    <label class="label-menu" for="input-entree10"></label>
+                                    <div class="menu-item__intitule">
+                                        <span class="menu-item__intitule-title">Coquilles Saint-jacques</span>
+                                        <span class="menu-item__intitule-subtitle">Accompagnées d'une purée de
+                                            panais</span>
+                                        <span class="menu-item__intitule-price">40€</span>
+                                    </div>
+                                    <div class="menu-item__check">
+                                        <div class=" menu-item__iconBox">
+                                            <span class="menu-item__iconBox-icon"><i
+                                                    class="fas fa-check-circle icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-menu__item">
+                                    <input id="input-entree11" type="checkbox" name="plat" value="Magret">
+                                    <label class="label-menu" for="input-entree11"></label>
+                                    <div class="menu-item__intitule">
+                                        <span class="menu-item__intitule-title">Magret de canard</span>
+                                        <span class="menu-item__intitule-subtitle">Et parmentier de pommes de
+                                            terres</span>
+                                        <span class="menu-item__intitule-price">35€</span>
+                                    </div>
+                                    <div class="menu-item__check">
+                                        <div class=" menu-item__iconBox">
+                                            <span class="menu-item__iconBox-icon"><i
+                                                    class="fas fa-check-circle icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-menu__item">
+                                    <input id="input-entree12" type="checkbox" name="plat" value="Pigeonneau">
+                                    <label class="label-menu" for="input-entree12"></label>
+                                    <div class="menu-item__intitule">
+                                        <span class="menu-item__intitule-title">Pigeonneau d'Ille-et-Vilaine</span>
+                                        <span class="menu-item__intitule-subtitle">Sur son lit de gnocchis aux
+                                            légumes</span>
+                                        <span class="menu-item__intitule-price">44€</span>
+                                    </div>
+                                    <div class="menu-item__check">
+                                        <div class=" menu-item__iconBox">
+                                            <span class="menu-item__iconBox-icon"><i
+                                                    class="fas fa-check-circle icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="menu">
+                            <h3 class="menu-title">DESSERTS</h3>
+                            <span class="horizontal-line"></span>
+                            <div class="menu-list">
+                                <div class="container-menu__item">
+                                    <input id="input-entree20" type="checkbox" name="desserts"
+                                        value="Pétales de violettes">
+                                    <label class="label-menu" for="input-entree20"></label>
+                                    <div class="menu-item__intitule">
+                                        <span class="menu-item__intitule-title">Pétales de violettes glacés</span>
+                                        <span class="menu-item__intitule-subtitle">Et purée de noisettes</span>
+                                        <span class="menu-item__intitule-price">18€</span>
+                                    </div>
+                                    <div class="menu-item__check">
+                                        <div class=" menu-item__iconBox">
+                                            <span class="menu-item__iconBox-icon"><i
+                                                    class="fas fa-check-circle icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-menu__item">
+                                    <input id="input-entree21" type="checkbox" name="desserts" value="Fondant">
+                                    <label class="label-menu" for="input-entree21"></label>
+                                    <div class="menu-item__intitule">
+                                        <span class="menu-item__intitule-title">Fondant au chocolat</span>
+                                        <span class="menu-item__intitule-subtitle">Revisité</span>
+                                        <span class="menu-item__intitule-price">22€</span>
+                                    </div>
+                                    <div class="menu-item__check">
+                                        <div class=" menu-item__iconBox">
+                                            <span class="menu-item__iconBox-icon"><i
+                                                    class="fas fa-check-circle icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-menu__item">
+                                    <input id="input-entree22" type="checkbox" name="desserts" value="Millefeuille">
+                                    <label class="label-menu" for="input-entree22"></label>
+                                    <div class="menu-item__intitule">
+                                        <span class="menu-item__intitule-title">Millefeuille croustillant</span>
+                                        <span class="menu-item__intitule-subtitle">Myrtilles et pâte d'amande</span>
+                                        <span class="menu-item__intitule-price">23€</span>
+                                    </div>
+                                    <div class="menu-item__check">
+                                        <div class=" menu-item__iconBox">
+                                            <span class="menu-item__iconBox-icon"><i
+                                                    class="fas fa-check-circle icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </form>
+                    <div class="content-btn">
+                        <button id="btnValidateMenu" class="button-explore button-explore--hover"
+                            onclick="toPlaceAnOrder()" aria-label="commander" name="btn-commander" title="Commander">Commander</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <section class="footer-container">
+            <div class="footer-content">
+                <h2 class="footer-title">
+                    <img class="footer-title__logo" src=".dist/pictures/logo/ohmyfood.png"
+                        srcset="./dist/pictures/logo/ohmyfood@2x.svg" alt="ohmyfood" width="392" height="68" />
+                </h2>
+                <ul class="footer-list">
+                    <li class="footer-list__item "><a class="item-nav" href="#"><img class="item-logo"
+                                src="./dist/pictures/icons/utensils-solid.svg" alt="proposer un restaurant" />Proposer
+                            un restaurant</a></li>
+                    <li class="footer-list__item "><a class="item-nav" href="#"><img class="item-logo"
+                                src="./dist/pictures/icons/hands-helping-solid.svg" alt="Devenir partenaire" />Devenir
+                            partenaire</a></li>
+                    <li class="footer-list__item item3"><a class="item-nav" href="#">Mentions légales</a></li>
+                    <li class="footer-list__item item4"><a class="item-nav" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+    <script src="test.js"></script>
+</body>

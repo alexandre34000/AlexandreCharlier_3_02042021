@@ -1,0 +1,72 @@
+/**
+* footer.scss 1.0 avril 2021 by Alexandre CHARLIER  
+*
+* Author : Alexandre CHARLIER.
+* GitHub : https://github.com/alexandre34000/AlexandreCharlier_3_02042021.
+* GitHub Pages : https://alexandre34000.github.io/AlexandreCharlier_3_02042021/.
+* Theme Name : ohmyfood .
+* Description : Stylesheet du footer.
+* Date: avril 2021. 
+*/
+
+.footer-container {
+  display: block;
+  background-color: $color-grey-dark;
+}
+.footer-content {
+  margin: $margin-ext-accueil;
+  padding: 0 5px;
+  height: 198px;
+  
+  @include tablette-only {
+    height: 150px;
+  }
+}
+.footer-title {
+  padding: 20px 0;
+  @include tablette-only {
+    text-align: center;
+  }
+}
+.footer-title__logo {
+  width:auto;
+  height: 20px;
+  filter: invert(99%) sepia(1%) saturate(5357%) hue-rotate(221deg)
+    brightness(118%) contrast(100%);
+
+  @include tablette-only {
+    height: 25px;
+  }
+}
+.footer-list {
+  color: $color-white;
+
+  @include tablette-only {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.footer-list__item {
+  cursor: pointer;
+}
+
+.footer-list__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.item-nav {
+  display: block;
+  color: $color-white;
+  font-stretch: ultra-expanded;
+  font-weight: 500;
+}
+
+.item-logo {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  filter: invert(99%) sepia(1%) saturate(5357%) hue-rotate(221deg)
+    brightness(118%) contrast(100%);
+}

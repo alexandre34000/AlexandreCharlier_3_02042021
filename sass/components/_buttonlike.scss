@@ -1,0 +1,44 @@
+.btn-like {
+position: relative;
+width: 26px;
+height: 26px;
+cursor: pointer;
+border:0;
+background-color:transparent;
+}
+
+.btn-like:hover{
+    .icon-solid--opacity{
+        opacity:1;
+      }
+      .icon-regular--opacity{
+        opacity:0;
+      }
+}
+  .btn-like__icon-regular::before {
+    @include icon-like;
+    color: black;
+  }
+  
+  .btn-like__icon-solid::before {
+    @include icon-like;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from($secondary),
+      to($primary)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  } 
+  
+  .icon-regular--opacity{
+    transition: all 0.4s ease-out;
+    opacity:1;
+  }
+  .icon-solid--opacity{
+    transition: all 0.4s ease-out;
+    opacity:0;
+  }

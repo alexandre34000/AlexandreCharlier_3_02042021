@@ -1,0 +1,87 @@
+/**
+* _page-restaurant.scss 1.0 avril 2021 by Alexandre CHARLIER  
+*
+* Author : Alexandre CHARLIER.
+* GitHub : https://github.com/alexandre34000/AlexandreCharlier_3_02042021.
+* GitHub Pages : https://alexandre34000.github.io/AlexandreCharlier_3_02042021/.
+* Theme Name : ohmyfood .
+* Description : Stylesheet des pages de chaque restaurant.
+* Date: avril 2021. 
+*/
+
+
+
+.container-restaurant {
+  display: grid;
+  grid-template-columns: [col1] 100%;
+  grid-template-rows: [row1] 220px [row2] 56px [row3] auto ;
+  @include tablette-only{
+    grid-template-rows: [row1] 60vh [row2] 56px [row3] auto ;
+  }
+}
+
+.container-img__standard {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  grid-column: col1;
+  grid-row: row1 / span 2;
+  overflow-x: hidden;
+}
+
+.container-menu__standard {
+  width: auto;
+  height: 100%;
+  grid-column: col1;
+  grid-row: row2/ span 2;
+  display: block;
+  background-color: $color-font;
+  border-radius: 36px 36px 0 0;
+}
+
+.content-menu__standard {
+  display:grid;
+  grid-template-columns: auto 50px;
+  grid-template-rows:100px auto 130px ;
+  margin: $margin-ext-restaurant-standard;
+  width: auto;
+  height: 100%;
+}
+
+.restaurant-title {
+  font-family: $font-title;
+  font-weight: normal;
+  grid-column: 1;
+  grid-row: 1;
+  align-self:center;
+
+  @include tablette-only{
+    font-size: $font-big;
+  }
+  @include desktop-only{
+     margin: $margin-ext-restaurant-md;
+   }
+}
+
+.restaurant-btn__like{
+  grid-column: 2;
+  grid-row: 1;
+  align-self:center;
+}
+.content-form{
+    grid-column: 1 /span 2;
+    grid-row:2;
+
+    @include tablette-only{
+      display:flex;
+      justify-content:space-around;
+      flex-direction:row;
+      flex-wrap:wrap;
+    }
+}
+.content-btn{
+  grid-column: 1/ span 2;
+  grid-row: 3;
+  justify-self:center;
+}

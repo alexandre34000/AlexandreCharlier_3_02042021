@@ -1,0 +1,64 @@
+/**
+* header.scss 1.0 avril 2021 by Alexandre CHARLIER  
+*
+* Author : Alexandre CHARLIER.
+* GitHub : https://github.com/alexandre34000/AlexandreCharlier_3_02042021.
+* GitHub Pages : https://alexandre34000.github.io/AlexandreCharlier_3_02042021/.
+* Theme Name : ohmyfood .
+* Description : Stylesheet du header.
+* Date: avril 2021. 
+*/
+.h1-title {
+  display: none;
+}
+.container-entete {
+  display: block;
+  background-color: $color-white;
+}
+.content-entete {
+  display: flex;
+  position: relative;
+  margin: $margin-ext-accueil;
+  width: auto;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  @include mobile-landscape {
+    height: 85px;
+  }
+}
+.link {
+  display: block;
+  position: absolute;
+  left: 0;
+
+  @include desktop-only {
+    height: 64px;
+    width: 30%;
+    left: 35%;
+  }
+}
+.link:before {
+  font-size: $font-sm;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f060";
+  @include desktop-only {
+    visibility: hidden;
+  }
+}
+
+.entete__logo {
+  height: 25px;
+
+  @include mobile-landscape {
+    height: 40px;
+  }
+
+  @include tablette-only{
+    height: 50px;
+  }
+  @include desktop-only {
+    height: 65px;
+  }
+}

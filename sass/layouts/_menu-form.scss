@@ -1,0 +1,223 @@
+/**
+* _menu-form.scss 1.0 avril 2021 by Alexandre CHARLIER  
+*
+* Author : Alexandre CHARLIER.
+* GitHub : https://github.com/alexandre34000/AlexandreCharlier_3_02042021.
+* GitHub Pages : https://alexandre34000.github.io/AlexandreCharlier_3_02042021/.
+* Theme Name : ohmyfood .
+* Description : Stylesheet du formulaire des menus Entree Plat Dessert.
+* Date: avril 2021. 
+*/
+
+.menu {
+  width: auto;
+  height: auto;
+  margin-bottom: 25px;
+   @include tablette-only{
+    text-align: center;
+    
+   }
+  @include desktop-only {
+    width: 100%;
+  }
+}
+.menu-title {
+  font-weight: 500;
+
+  @include tablette-only {
+    overflow: hidden;
+    margin-left :auto;
+    margin-right:auto;
+    text-align: center;
+    max-width:500px;
+  }
+}
+.menu-title:before,
+.menu-title:after {
+  @include tablette-only {
+    background-color: $tertiary;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 200px;
+  }
+}
+.menu-title:before {
+  right: 16px;
+  margin-left: -50%;
+}
+.menu-title:after {
+  left: 16px;
+  margin-right: -50%;
+}
+
+.horizontal-line {
+  display: inline-block;
+  height: 10px;
+  width: 38px;
+  border-bottom: 2px solid $tertiary;
+
+  @include tablette-only {
+    display: none;
+  }
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+  width: 100%;
+  height: auto;
+  overflow:hidden;
+
+  @include desktop-only {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.container-menu__item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  overflow: hidden;
+  width: 100%;
+  min-height: 68px;
+  background-color: white;
+  border-radius: 13px;
+  box-shadow: 0px 4px 8px darken($color-font, 10%);
+  animation: 2s linear 0.5s forwards upBox;
+  transition: box-shadow 0.2s linear;
+  opacity: 0;
+
+  @include tablette-only{
+    width:500px;
+  }
+
+  @include desktop-only {
+    animation: 2s linear 0.2s forwards leftBox;
+    width: 350px;
+  }
+}
+
+.container-menu__item:hover {
+  box-shadow: 0px 4px 8px darken($color-font, 30%);
+}
+.container-menu__item:nth-child(1) {
+  animation-delay: nth($animations-delay, 1);
+}
+.container-menu__item:nth-child(2) {
+  animation-delay: nth($animations-delay, 2);
+}
+.container-menu__item:nth-child(3) {
+  animation-delay: nth($animations-delay, 3);
+}
+.container-menu__item:nth-child(4) {
+  animation-delay: nth($animations-delay, 4);
+}
+
+@keyframes upBox {
+  0% {
+    opacity: 1;
+    margin-top: 30px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 15px;
+  }
+}
+
+@keyframes leftBox {
+  0% {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.label-menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container-menu__item input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.container-menu__item
+  input[type="checkbox"]:checked
+  ~ .menu-item__check
+  .menu-item__iconBox {
+  width: 60px;
+  background-color: $tertiary;
+
+  .icon {
+    transform: rotate(360deg);
+  }
+}
+
+.menu-item__intitule {
+  display: grid;
+  grid-template-columns: auto 40px;
+  grid-template-rows: auto auto;
+  width: 100%;
+  height: auto;
+  margin: 15px;
+}
+
+.menu-item__intitule-title {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: $font-md;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-item__intitule-subtitle {
+  grid-column: 1;
+  grid-row: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-item__intitule-price {
+  grid-column: 2;
+  grid-row: 2;
+  font-weight: bold;
+  justify-self: right;
+}
+
+.menu-item__check {
+}
+.menu-item__iconBox {
+  height: 100%;
+  transition: all 0.4s ease-out;
+  width: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.menu-item__iconBox-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-left: 18px;
+}
+.icon {
+  transition: all 0.4s ease-out;
+  font-size: 24px;
+  color: white;
+}
+
+.btn-menu {
+  text-align: center;
+}
